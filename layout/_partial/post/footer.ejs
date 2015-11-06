@@ -7,7 +7,10 @@
 	  <%- partial('jiathis') %>
 	 </div>
 	<% } else { %>
-	  <div data-url="<%- item.permalink %>" data-title="<% if (item.title){ %><%= item.title %> | <% } %><%= config.title %>" data-tsina="<%= theme.author.tsina %>" class="share clearfix">
+	  <div data-url="<%- item.permalink %>" data-title="<% if (item.title){ %><%= item.title %> | <% } %><%= config.title %>" data-tsina="<%= theme.author.tsina %>" class="clearfix">
+		<% if (page.layout=='post'||page.layout=='page'||page.layout=='photo') { %>
+			<div class="addthis_sharing_toolbox"></div>
+  		<% } %>
 	  </div>
 	<% } %>
 	</div>
